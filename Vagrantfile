@@ -79,5 +79,7 @@ Vagrant.configure("2") do |config|
 	  cat /etc/selinux/config
 	  systemctl start nginx
     systemctl enable nginx
+    systemctl stop firewalld
+    systemctl disable firewalld
   SHELL
 end
